@@ -5,7 +5,9 @@ conexao = pyodbc.connect("Driver={SQL Server Native Client 11.0};" "Server=DESKT
                          "Database=agenda;" "Trusted_Connection=yes;")
 
 mycursor = conexao.cursor()
-mycursor.execute('SELECT * FROM cidade')
+comando_sql = 'SELECT * FROM cidade'
+mycursor.execute(comando_sql)
+
 linha = mycursor.fetchone()
 while linha:
     print(f'cidade: {linha[0]} - Email: {linha[1]}')

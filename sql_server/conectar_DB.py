@@ -10,6 +10,7 @@ cursor = conexao.cursor()
 
 cursor.execute('SELECT * FROM cidade')
 
+
 for row in cursor:
     print('row = %r' % (row,))
 
