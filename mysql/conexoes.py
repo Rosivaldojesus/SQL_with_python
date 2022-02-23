@@ -4,7 +4,7 @@ from mysql.connector import connect
 #  host, port, user e password
 
 def conectar_banco_dados():
-    conexao = connect(host='localhost', port='3308', user='root',passwd='admin123')
+    conexao = connect(host='localhost', port='3308', user='root',passwd='admin123', database='agenda')
     return conexao
 
 
